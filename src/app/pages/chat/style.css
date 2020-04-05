@@ -87,22 +87,30 @@ div.chat div.chat-box div.online div.user {
   width: 100%;
   padding: 15px;
   border-bottom: 1px solid #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-div.chat div.chat-box div.online div.user h5 {
+div.chat div.chat-box div.online div.user div.infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+div.chat div.chat-box div.online div.user div.logout {
+  padding: 0px 5px;
+} 
+div.chat div.chat-box div.online div.user div.logout button {
+  font-size: 13px;
+  font-weight: 400;
+  color: #FF4D4D;
+  border: none;
+  cursor: pointer;
+}
+div.chat div.chat-box div.online div.user div.infos h5 {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 2px;
   color: #3c4258;
-}
-div.chat div.chat-box div.online div.user h6 {
-  font-size: 12px;
-  font-weight: 400;
-  color: #999fb3;
-}
-div.chat div.chat-box div.online div.user div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 div.chat div.chat-box div.online div.user div.dot {
   width: 10px;
