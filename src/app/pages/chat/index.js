@@ -62,21 +62,28 @@ function Chat() {
           </div>
         </div>
         <div className='online'>
+          <div className='user'>
+            <div className='infos'>
+              <div className='dot' />
+              <h5>{user.name}</h5>
+            </div>
+            <div className='logout'>
+              <button type='button' onClick={disconnect}>Logout</button>
+            </div>
+
+          </div>
           {
             users.map((local_user) => (
-              <div className='user'>
-                <div className='infos'>
-                  <div className='dot' />
-                  <h5>{local_user.name}</h5>
-                </div>
-                { (local_user.id === user.id)
-                  ? (
-                    <div className='logout'>
-                      <button type='button' onClick={disconnect}>Logout</button>
+              (local_user.id !== user.id)
+                ? (
+                  <div className='user'>
+                    <div className='infos'>
+                      <div className='dot' />
+                      <h5>{local_user.name}</h5>
                     </div>
-                  )
-                  : <div /> }
-              </div>
+                  </div>
+                )
+                : null
             ))
           }
         </div>
