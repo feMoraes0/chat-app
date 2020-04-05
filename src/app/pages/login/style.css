@@ -1,0 +1,47 @@
+div.login {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.login div.login-box {
+  width: 30%;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 20px rgba(14,25,80,.30);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+div.login div.login-box img {
+  margin-bottom: 30px;
+}
+
+div.login div.login-box input {
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  padding: 20px 20px;
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+div.login div.login-box button, .button {
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2ABF7A;
+  color: #FFFFFF;
+}
