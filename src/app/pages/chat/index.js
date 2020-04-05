@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
+import socket from '../../services/socket';
+// import socket from '../../services/socket';
+// import socket from '../../services/socket';
 
 function Chat() {
   const elements = [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3];
+  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    socket.on('users', (socket_users) => {
+      setUsers(socket_users);
+    });
+    socket.on('user', (socket_user) => {
+      setUser(socket_user);
+      console.log(socket_user);
+    });
+  });
+
 
   return (
     <div className='chat'>
@@ -43,14 +59,14 @@ function Chat() {
         </div>
         <div className='online'>
           {
-            elements.map(() => (
+            users.map((local_user) => (
               <div className='user'>
                 <div>
                   <div className='dot' />
-                  <h5>Fernando</h5>
+                  <h5>{local_user.name}</h5>
                 </div>
                 <h6>
-                  ID: A6F87B
+                  {local_user.id}
                 </h6>
               </div>
             ))
