@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.css';
 import { useHistory } from 'react-router-dom';
+import { FiLogOut, FiSend } from 'react-icons/fi';
 import socket from '../../services/socket';
 
 function Chat() {
@@ -58,7 +59,10 @@ function Chat() {
           </div>
           <div className='input'>
             <input type='text' placeholder='Type a message' />
-            <button type='button'>Send</button>
+            <button type='button'>
+              <FiSend size={20} />
+              &nbsp;
+            </button>
           </div>
         </div>
         <div className='online'>
@@ -68,7 +72,10 @@ function Chat() {
               <h5>{user.name}</h5>
             </div>
             <div className='logout'>
-              <button type='button' onClick={disconnect}>Logout</button>
+              <button type='button' onClick={disconnect}>
+                <FiLogOut size={20} />
+                &nbsp;
+              </button>
             </div>
 
           </div>
