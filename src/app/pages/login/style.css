@@ -23,6 +23,7 @@ div.login div.login-box {
 
 div.login div.login-box img {
   margin-bottom: 30px;
+  max-width: 100%;
 }
 
 div.login div.login-box input {

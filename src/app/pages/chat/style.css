@@ -19,65 +19,6 @@ div.chat div.chat-box {
   justify-content: stretch;
 }
 
-div.chat div.chat-box div.conversation {
-  width: 75%;
-  height: 100%;
-  background-color: rgba(42, 191, 122, 0.2);
-  border-radius: 5px 0px 0px 5px;
-}
-
-div.chat div.chat-box div.conversation div.history {
-  height: calc(100% - 50px);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding-top: 10px;
-  padding-bottom: 5px;
-}
-div.chat div.chat-box div.conversation div.history div.right-message {
-  align-self: flex-end !important;
-}
-div.chat div.chat-box div.conversation div.history div.message {
-  border-radius: 5px;
-  padding: 10px;
-  margin: 5px 15px;
-  background-color: #FFFFFF;
-  max-width: 50%;
-}
-div.chat div.chat-box div.conversation div.history div.message h5 {
-  font-size: 12px;
-  font-weight: 400;
-  margin-bottom: 2px;
-  color: #3c4258;
-}
-div.chat div.chat-box div.conversation div.history div.message h6 {
-  font-size: 12px;
-  font-weight: 400;
-  margin-bottom: 2px;
-  color: #3c4258;
-}
-
-
-div.chat div.chat-box div.conversation div.input {
-  height: 50px;
-}
-div.chat div.chat-box div.conversation div.input input {
-  width: calc(100% - 60px);
-  height: 50px;
-  border: 1px solid #FFFFFF;
-  font-size: 16px;
-  padding: 0px 0px 0px 10px;
-}
-div.chat div.chat-box div.conversation div.input button {
-  width: 60px;
-  height: 50px;
-  font-size: 16px;
-  border: 1px solid #2ABF7A;
-  background-color: #2ABF7A;
-  color: #FFFFFF;
-}
-
 div.chat div.chat-box div.online {
   width: 25%;
   overflow-y: auto;
