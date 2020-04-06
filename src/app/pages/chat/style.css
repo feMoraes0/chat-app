@@ -19,45 +19,48 @@ div.chat div.chat-box {
   justify-content: stretch;
 }
 
-div.chat div.chat-box div.online {
-  width: 25%;
-  overflow-y: auto;
-  border-radius: 0px 5px 5px 0px;
-}
-div.chat div.chat-box div.online div.user {
-  width: 100%;
-  padding: 15px;
-  border-bottom: 1px solid #F1F1F1;
+div.chat div.chat-box div.chat-section {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 75%;
+}
+div.chat div.chat-box div.chat-section div.header {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 55px;
+  width: 100%;
+  padding: 0px 20px;
+  background-color: #FFFFFF;
 }
-div.chat div.chat-box div.online div.user div.infos {
+div.chat div.chat-box div.chat-section div.header div.logout {
+  padding: 0px 5px;
+} 
+div.chat div.chat-box div.chat-section div.header div.logout button {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ef7771;
+  border: none;
+  cursor: pointer;
+}
+div.chat div.chat-box div.chat-section div.header div.infos {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-div.chat div.chat-box div.online div.user div.logout {
-  padding: 0px 5px;
-} 
-div.chat div.chat-box div.online div.user div.logout button {
-  font-size: 13px;
-  font-weight: 400;
-  color: #FF4D4D;
-  border: none;
-  cursor: pointer;
-}
-div.chat div.chat-box div.online div.user div.infos h5 {
+div.chat div.chat-box div.chat-section div.header div.infos h5 {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 2px;
   color: #3c4258;
 }
-div.chat div.chat-box div.online div.user div.dot {
+div.chat div.chat-box div.chat-section div.header div.dot {
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  margin-right: 5px;
+  margin-right: 10px;
   background-color: #2ABF7A;
   position: relative;
 }

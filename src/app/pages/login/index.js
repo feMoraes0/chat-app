@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import { useHistory } from 'react-router-dom';
 import Logo from '../../assets/birds.png';
@@ -8,10 +8,11 @@ function Login() {
   const [name, setName] = useState('');
   const history = useHistory();
 
-  function enter() {
-    if (name !== '') {
+  function enter(value) {
+    sessionStorage.setItem('name', value);
+    if (value !== '') {
       socket.io.opts.query = {
-        name,
+        name: value,
       };
 
       socket.connect();
@@ -19,6 +20,13 @@ function Login() {
       history.push('/chat');
     }
   }
+
+  useEffect(() => {
+    const session_name = sessionStorage.getItem('name');
+    if (session_name !== null) {
+      enter(session_name);
+    }
+  }, []);
 
   return (
     <div className='login'>
@@ -30,7 +38,7 @@ function Login() {
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
-        <button type='button' onClick={enter}>Enter</button>
+        <button type='button' onClick={() => enter(name)}>Enter</button>
       </div>
     </div>
   );

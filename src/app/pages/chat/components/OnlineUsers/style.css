@@ -1,0 +1,33 @@
+
+div.online {
+  width: 25%;
+  overflow-y: auto;
+  border-radius: 0px 5px 5px 0px;
+}
+div.online div.user {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.online div.user div.infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+div.online div.user div.infos h5 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #3c4258;
+}
+div.online div.user div.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-right: 5px;
+  background-color: #2ABF7A;
+  position: relative;
+}
