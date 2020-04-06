@@ -12,21 +12,18 @@ function Chat() {
   const history = useHistory();
 
   useEffect(() => {
-    console.log('renderizando componente');
     socket.on('users', (socket_users) => {
       setUsers(socket_users);
     });
+
     socket.on('user', (socket_user) => {
       setUser(socket_user);
     });
-  });
 
-  useEffect(() => {
-    console.log(messages);
     socket.on('chat', (socket_msg) => {
-      setMessages([...messages, ...[socket_msg]]);
+      setMessages((old_messages) => [...old_messages, socket_msg]);
     });
-  });
+  }, []);
 
   function disconnect() {
     socket.disconnect();
@@ -52,24 +49,21 @@ function Chat() {
         <div className='conversation'>
           <div className='history'>
             {
-              messages.map((element, index) => {
-                if (element.id === user.id) {
-                  return (
-                    // eslint-disable-next-line react/no-array-index-key
-                    <div key={index} className='message right-message'>
-                      <h5>
-                        {element.name}
-                        {' '}
-                        said:
-                      </h5>
-                      <h6>
-                        {element.message}
-                      </h6>
-                    </div>
-                  );
-                }
-                return (
-                  // eslint-disable-next-line react/no-array-index-key
+              messages.map((element, index) => (
+                (element.id === user.id) ? (
+                // eslint-disable-next-line react/no-array-index-key
+                  <div key={index} className='message right-message'>
+                    <h5>
+                      {element.name}
+                      {' '}
+                      said:
+                    </h5>
+                    <h6>
+                      {element.message}
+                    </h6>
+                  </div>
+                ) : (
+                // eslint-disable-next-line react/no-array-index-key
                   <div key={index} className='message'>
                     <h5>
                       {element.name}
@@ -80,8 +74,8 @@ function Chat() {
                       {element.message}
                     </h6>
                   </div>
-                );
-              })
+                )
+              ))
             }
           </div>
           <div className='input'>
