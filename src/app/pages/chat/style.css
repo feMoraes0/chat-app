@@ -20,10 +20,14 @@ div.chat div.chat-box {
 }
 
 div.chat div.chat-box div.chat-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 75%;
+}
+div.chat div.chat-box div.chat-section div.conversation {
+  height: calc(100% - 55px);
 }
 div.chat div.chat-box div.chat-section div.header {
   display: flex;
@@ -35,6 +39,7 @@ div.chat div.chat-box div.chat-section div.header {
   padding: 0px 20px;
   background-color: #FFFFFF;
 }
+
 div.chat div.chat-box div.chat-section div.header div.logout {
   padding: 0px 5px;
 } 

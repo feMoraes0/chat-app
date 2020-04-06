@@ -8,7 +8,7 @@ div.conversation {
 
 div.conversation div.history {
   height: calc(100% - 50px);
-  overflow-y: auto;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: stretch;
