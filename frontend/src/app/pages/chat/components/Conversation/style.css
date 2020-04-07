@@ -38,13 +38,13 @@ div.conversation div.history div.message h6 {
   color: #3c4258;
 }
 
-div.input {
+div.input form {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
-div.conversation div.input input {
+div.conversation div.input form input {
   width: calc(100% - 60px);
   height: 45px;
   border: 1px solid #FFFFFF;
@@ -52,7 +52,7 @@ div.conversation div.input input {
   padding-left: 10px;
   border-radius: 45px;
 }
-div.conversation div.input button {
+div.conversation div.input form button {
   width: 45px;
   height: 45px;
   border-radius: 100%;

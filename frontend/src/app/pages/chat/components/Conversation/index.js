@@ -8,6 +8,12 @@ function Conversation({
 }) {
   const [message, setMessage] = useState('');
 
+  function sendMessage(event) {
+    event.preventDefault();
+    handleSend(message);
+    setMessage('');
+  }
+
   return (
     <div className='conversation'>
       <div className='history'>
@@ -42,16 +48,18 @@ function Conversation({
     }
       </div>
       <div className='input'>
-        <input
-          type='text'
-          placeholder='Type a message'
-          value={message}
-          onChange={(event) => setMessage(event.target.value)}
-        />
-        <button type='button' onClick={() => { handleSend(message); setMessage(''); }}>
-          <FiSend size={20} />
+        <form onSubmit={sendMessage}>
+          <input
+            type='text'
+            placeholder='Type a message'
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+          />
+          <button type='submit'>
+            <FiSend size={20} />
           &nbsp;
-        </button>
+          </button>
+        </form>
       </div>
     </div>
   );
