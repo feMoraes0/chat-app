@@ -23,7 +23,7 @@ div.conversation div.history div.message {
   padding: 10px;
   margin: 5px 15px;
   background-color: #FFFFFF;
-  max-width: 50%;
+  width: calc(50% - 30px);
 }
 div.conversation div.history div.message h5 {
   font-size: 12px;
