@@ -26,6 +26,7 @@ div.chat div.chat-box div.chat-section {
   align-items: stretch;
   width: 75%;
 }
+
 div.chat div.chat-box div.chat-section div.conversation {
   height: calc(100% - 55px);
 }
@@ -68,4 +69,15 @@ div.chat div.chat-box div.chat-section div.header div.dot {
   margin-right: 10px;
   background-color: #2ABF7A;
   position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  div.chat div.chat-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  div.chat div.chat-box div.chat-section {
+    width: 65%;
+  }
 }

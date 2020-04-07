@@ -4,8 +4,14 @@ div.online {
   overflow-y: auto;
   border-radius: 0px 5px 5px 0px;
 }
+@media screen and (max-width: 900px) {
+  div.online {
+    width: 35%;
+  }
+}
 div.online div.user {
   width: 100%;
+  min-height: 55px;
   padding: 15px;
   border-bottom: 1px solid #F1F1F1;
   display: flex;
