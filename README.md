@@ -40,10 +40,10 @@ $ git clone https://github.com/feMoraes0/chat-app.git
 $ cd chat-app
 
 # Move server out
-$ mv ./chat-server ../
+$ mv ./backend ../
 
 # Go into the repository
-$ cd ../chat-server
+$ cd ../backend
 
 # Install server dependencies
 $ npm install
@@ -52,6 +52,9 @@ $ npm install
 $ npm start
 
 # Open a new terminal and go into the chat-app folder again
+
+# Go into the frontend folder
+$ cd frontend
 
 # Install dependencies
 $ npm install
