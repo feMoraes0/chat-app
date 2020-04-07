@@ -21,6 +21,23 @@ div.login div.login-box {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  div.login div.login-box {
+    width: 75%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  div.login div.login-box {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
 div.login div.login-box img {
   margin-bottom: 30px;
   max-width: 100%;
@@ -46,3 +63,4 @@ div.login div.login-box button, .button {
   background-color: #2ABF7A;
   color: #FFFFFF;
 }
+
