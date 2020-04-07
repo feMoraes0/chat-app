@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Chat App</h1>
 
-## Available Scripts
+> You can find all the project specifications [here](https://github.com/florinpop17/app-ideas/blob/master/Projects/3-Advanced/Chat-App.md)
 
-In the project directory, you can run:
+Tier: 3-Advanced
 
-### `npm start`
+Real-time chat interface where multiple users can interact with each other by sending messages.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As a MVP(Minimum Viable Product) you can focus on building the Chat interface. Real-time functionality can be added later (the bonus features).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## User Stories
 
-### `npm test`
+-   [x] User is prompted to enter a username when he visits the chat app. The username will be stored in the application
+-   [x] User can see an `input field` where he can type a new message
+-   [ ] By pressing the `enter` key or by clicking on the `send` button the text will be displayed in the `chat box` alongside his username (e.g. `John Doe: Hello World!`)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Bonus features
 
-### `npm run build`
+-   [x] The messages will be visible to all the Users that are in the chat app (using WebSockets)
+-   [x] When a new User joins the chat, a message is displayed to all the existing Users
+-   [x] Messages are saved in a database - *adapted to local variable on NodeJS server
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Print
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<p align="center">
+  <img width="800" src="./prints/git_chat_app.gif"/>
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Useful links and resources
 
-### `npm run eject`
+-   [Socket.io](https://socket.io)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## How to use
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+# Clone this repository
+$ git clone https://github.com/feMoraes0/chat-app.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Go into the repository
+$ cd chat-app
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Move server out
+$ mv ./chat-server ../
 
-## Learn More
+# Go into the repository
+$ cd ../chat-server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install server dependencies
+$ npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Run the server
+$ npm start
 
-### Code Splitting
+# Open a new terminal and go into the chat-app folder again
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+# Install dependencies
+$ npm install
 
-### Analyzing the Bundle Size
+# Run the app
+$ npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Contact
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  - <a target="_blank" href="https://www.linkedin.com/in/fernando-moraes-48a26916a/">LinkedIn</a>
+  - <a target="_blank" href="mailto:fernandomoraes.lopes@gmail.com">E-mail</a>
